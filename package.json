@@ -31,7 +31,14 @@
         "type": "git",
         "url": "git+https://github.com/vidhill/fortawesome-brands-svg-11ty-shortcode.git"
     },
-    "keywords": [],
+    "keywords": [
+        "eleventy",
+        "shortcode",
+        "fortawesome",
+        "fontawesome",
+        "svg",
+        "11ty"
+    ],
     "devDependencies": {
         "@babel/cli": "^7.12.1",
         "@babel/core": "^7.14.3",
