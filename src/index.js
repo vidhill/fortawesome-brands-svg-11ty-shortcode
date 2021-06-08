@@ -6,4 +6,11 @@ const fortawesomeBrandsShortcode = helpers.makeFortawesomeShortcode(
     'fab'
 );
 
-export { fortawesomeBrandsShortcode };
+function fortawesomeBrandsPlugin(eleventyConfig) {
+    eleventyConfig.addShortcode('fortawesomeBrand', fortawesomeBrandsShortcode);
+}
+
+module.exports = {
+    fortawesomeBrandsShortcode,
+    fortawesomeBrandsPlugin,
+};

@@ -8,7 +8,23 @@ $ npm install @vidhill/fortawesome-brands-11ty-shortcode --save
 
 ## Setup
 
-Import the render function so that a custom shortcode name can be defined
+**Option A:** Import as a plugin, shortcodes names are fixed, if you want to name the shortcodes yourself see Option B
+
+```javascript
+const {
+    fortawesomeBrandsPlugin,
+} = require('@vidhill/fortawesome-brands-11ty-shortcode');
+
+module.exports = function (eleventyConfig) {
+    eleventyConfig.addPlugin(fortawesomeBrandsPlugin);
+
+    return {
+        // normal eleventy config
+    };
+};
+```
+
+**Option B:** import the render function so that a custom shortcode name can be defined
 
 ```javascript
 const {
@@ -72,6 +88,12 @@ Specifying a css class to be added to the `svg` element
 >
     <path fill="currentColor" d="M165.9 397.4c0....4-2.3-4-3.3-5.6-2z"></path>
 </svg>
+```
+
+Multiple css class to be added to they svg by passing a comma separated string:
+
+```javascript
+{% fortawesomeBrand 'github', "social-icon,unicorn-icon" %}
 ```
 
 ## Development
