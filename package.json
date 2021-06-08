@@ -59,6 +59,6 @@
     },
     "dependencies": {
         "@fortawesome/free-brands-svg-icons": "^5.15.3",
-        "@vidhill/fortawesome-11ty-shortcode-helper": "^1.0.0"
+        "@vidhill/fortawesome-11ty-shortcode-helper": "^1.0.1"
     }
 }
