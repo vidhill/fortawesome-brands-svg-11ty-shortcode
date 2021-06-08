@@ -1,6 +1,9 @@
-function helloWorld() {
-    // eslint-disable-next-line no-console
-    console.log('hello world');
-}
+const helpers = require('@vidhill/fortawesome-11ty-shortcode-helper');
+const brandIcons = require('@fortawesome/free-brands-svg-icons');
 
-export { helloWorld };
+const fortawesomeBrandsShortcode = helpers.makeFortawesomeShortcode(
+    brandIcons,
+    'fab'
+);
+
+export { fortawesomeBrandsShortcode };
