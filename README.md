@@ -1,40 +1,78 @@
-# npm-package-template
+# @vidhill/fortawesome-brands-11ty-shortcode
 
-Repo intended to be used as a template for npm packages,  
-with opinionated build setup `babel`, `eslint`, `jest`, `husky` etc pre-configured
-
-Add description
+Allows fortawesome brand icons svgs to be embedded inline into eleventy templates
 
 ```bash
-$ npm install package --save # replace with real npm package name
+$ npm install @vidhill/fortawesome-brands-11ty-shortcode --save
 ```
 
 ## Setup
 
+Import the render function so that a custom shortcode name can be defined
+
 ```javascript
-// add relevant setup here
+const {
+    fortawesomeBrandsShortcode,
+} = require('@vidhill/fortawesome-brands-11ty-shortcode');
+
+module.exports = function (eleventyConfig) {
+    eleventyConfig.addShortcode('fortawesomeBrand', fortawesomeBrandsShortcode);
+
+    return {
+        // normal eleventy config
+    };
+};
 ```
 
 ## Usage
 
+### Input
+
 ```javascript
-// add example usage here
+{% fortawesomeBrand 'github' %}
 ```
 
-### Outputs
+#### Output
 
 ```html
-<!-- add example output here -->
-<div></div>
+<svg
+    aria-hidden="true"
+    focusable="false"
+    data-prefix="fab"
+    data-icon="github"
+    class="svg-inline--fa fa-github fa-w-16"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 496 512"
+>
+    <path fill="currentColor" d="M165.9 397.4c0....4-2.3-4-3.3-5.6-2z"></path>
+</svg>
 ```
 
-### Reminder
+### Input
 
--   change `name` in `package.json`
--   change `keywords` in `package.json`
--   update `bugs` url in `package.json`
--   update `homepage` url in `package.json`
--   Remove `package-lock.json` from `.gitignore`
+Specifying a css class to be added to the `svg` element
+
+```javascript
+{% fortawesomeBrand 'github', "social-icon" %}
+```
+
+#### Output
+
+```html
+<svg
+    aria-hidden="true"
+    focusable="false"
+    data-prefix="fab"
+    data-icon="github"
+    class="svg-inline--fa fa-github fa-w-16 social-icon"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 496 512"
+>
+    <path fill="currentColor" d="M165.9 397.4c0....4-2.3-4-3.3-5.6-2z"></path>
+</svg>
+```
 
 ## Development
 
