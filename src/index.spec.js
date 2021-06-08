@@ -5,4 +5,10 @@ describe("test 'fortawesomeBrandsShortcode()'", () => {
         expect(fortawesomeBrandsShortcode).not.toBeUndefined();
         expect(fortawesomeBrandsShortcode).toBeType('function');
     });
+
+    it('should return a defined string', () => {
+        const result = fortawesomeBrandsShortcode('github', 'social-icon');
+        expect(result).not.toBeUndefined();
+        expect(result).toBeType('string');
+    });
 });
