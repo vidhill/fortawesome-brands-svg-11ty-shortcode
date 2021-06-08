@@ -1,6 +1,8 @@
 # @vidhill/fortawesome-brands-11ty-shortcode
 
-Allows fortawesome brand icons svgs to be embedded inline into eleventy templates
+Allows fortawesome brand icons to be embedded as inline svg into [11ty](https://www.11ty.dev/) templates.
+
+See brand icon names here: [font-awesome-5-brands](https://fortawesome.com/sets/font-awesome-5-brands)
 
 ```bash
 $ npm install @vidhill/fortawesome-brands-11ty-shortcode --save
