@@ -1,6 +1,8 @@
 # @vidhill/fortawesome-brands-11ty-shortcode
 
-Allows fortawesome brand icons to be embedded as inline svg into [11ty](https://www.11ty.dev/) templates.
+[Eleventy/11ty](https://www.11ty.dev/) shortcode.
+
+Allows [@fortawesome/free-brands-svg-icons](https://www.npmjs.com/package/@fortawesome/free-brands-svg-icons) to be embedded as inline svg into 11ty templates.
 
 See brand icon names here: [font-awesome-5-brands](https://fortawesome.com/sets/font-awesome-5-brands)
 
