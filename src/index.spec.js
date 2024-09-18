@@ -31,14 +31,14 @@ describe("test 'fortawesomeBrandsPlugin()'", () => {
 
         it("should call 'eleventyConfig.addShortcode()'", () => {
             fortawesomeBrandsPlugin(eleventyConfig);
-            expect(mockAddShortcode).toBeCalledTimes(1);
+            expect(mockAddShortcode).toHaveBeenCalledTimes(1);
         });
 
         it("should call 'eleventyConfig.addShortcode()' with the expected arguments", () => {
             fortawesomeBrandsPlugin(eleventyConfig);
-            expect(mockAddShortcode).toBeCalledWith(
+            expect(mockAddShortcode).toHaveBeenCalledWith(
                 'fortawesomeBrand',
-                fortawesomeBrandsShortcode
+                fortawesomeBrandsShortcode,
             );
         });
     });
