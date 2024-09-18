@@ -3,7 +3,7 @@ const brandIcons = require('@fortawesome/free-brands-svg-icons');
 
 const fortawesomeBrandsShortcode = helpers.makeFortawesomeShortcode(
     brandIcons,
-    'fab'
+    'fab',
 );
 
 function fortawesomeBrandsPlugin(eleventyConfig) {
