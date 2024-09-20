@@ -1,3 +1,5 @@
+import { describe, it, beforeEach, expect, vi } from 'vitest';
+
 import { fortawesomeBrandsShortcode, fortawesomeBrandsPlugin } from './index';
 
 describe("test 'fortawesomeBrandsShortcode()'", () => {
@@ -20,7 +22,7 @@ describe("test 'fortawesomeBrandsPlugin()'", () => {
     });
 
     describe('test the plugin', () => {
-        const mockAddShortcode = jest.fn();
+        const mockAddShortcode = vi.fn();
         const eleventyConfig = {
             addShortcode: mockAddShortcode,
         };
